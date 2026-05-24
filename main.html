@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="flashlight.css">
+    <link rel="stylesheet" href="ectoplasm.css">
+    <script type="text/javascript" src="rooms.js"></script>
+    <script type="text/javascript" src="flashlight.js"></script>
+    <script type="text/javascript" src="monster.js"></script>
+    <script type="text/javascript" src="sanity.js"></script>
+    <script type="text/javascript" src="ectoplasm.js"></script>
+</head>
+<body onload="RandomRoomGen()">
+
+<div class="room">
+    <!--basic-->
+    <div id="announcement"><p>OBJECT GET:</p><p id="obj">battery</p></div>
+    <div id="fade_fx"></div>
+    <img id="light">
+    <img id="dark">
+        <div id="hitbox">
+    <script>
+        MouseoverRepeater(hitbox_confirm);
+    </script>
+
+</div>
+  <!--minigame
+<div id="inspect">
+    <button id="inspectbutton" onclick="inspect()">inspect</button>
+    <p id="Timer">10</p>
+    <button id="ectoplasm" onclick="EctoGen()">0</button>
+</div>-->
+  <!--nav section-->
+</div>
+<div class="navboard">
+    <div class="nav">
+    <button onclick="lightswitch()">Use Flashlight</button>
+    <button onclick="inspect()">Inspect</button>
+    <button onclick="RandomRoomGen()">Next Room>></button>
+    <!--<button onclick="generate('attic', 4)">attic</button>
+    <button onclick="generate('bedroom', 8)">bedroom</button>
+    <button onclick="generate('livingroom',0)">livingroom</button>
+    <button onclick="generate('kitchen', 12)">kitchen</button>
+    <button onclick="generate('fronthall', 16)">fronthall</button>
+    <button onclick="generate('basement',20)">basement</button>-->
+    </div>
+<!--moniter bar-->
+<div class="moniter">
+<!--battery tracker-->
+        <table id="moniter_name">
+            <tr>
+                <td id="name_cell">battery power: </td>
+                <td id="flashlight percent">100%</td>
+            </tr>
+        </table>
+        <canvas id="battery" width="50px" height="1px"></canvas>   <script>drawbar(cap, 'battery');</script>
+<!--sanity tracker-->
+        <table id="moniter_name">
+            <tr>
+                <td id="name_cell">sanity: </td>
+                <td id="sanity percent">100%</td>
+            </tr>
+        </table>
+    <canvas id="sanity" width="50px" height="1px"></canvas>   <script>drawbar(sanity_cap, 'sanity');</script>
+  <!--ecplasm tracker-->
+        <table id="moniter_name">
+    <tr>
+        <td id="name_cell">ectoplasm: </td>
+        <td id="ectometer percent">0%</td>
+    </tr> 
+        </table>
+    <canvas id="ectometer" width="50px" height="1px"></canvas>  
+</div>
+</div>
+</body>
+</html>

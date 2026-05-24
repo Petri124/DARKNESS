@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<style>
+    body{
+        background-color: black;
+        font-family: monospace;
+        color: white;
+    }
+</style>
+    <style>
+        #deathscreen{
+            margin: auto;
+            background-image: url(Misc_assets/deathscreen.jpg);
+            height: 750px;
+            width: 460px;
+            padding: 100px;
+        }
+        button{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: solid,black,2px;
+        height:40px;
+        width: 100%;
+        box-shadow: 0 5px #5a5a5a;
+        font-size: 24px;
+        font-family: monospace;
+        }
+        button:hover{
+        background-color: #d9d9d9;
+        }
+button:active {
+  background-color: #787878;
+  box-shadow: 0 2px #666;
+  transform: translateY(3px);
+}
+    </style>
+<div id="deathscreen">
+    <h1>What a shame.</h1>
+    <button onclick="document.location='main.html'">restart</button>
+</div>
+
+</body>
+
+</html>

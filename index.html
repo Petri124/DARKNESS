@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<style>
+body{
+    background-color: black;
+    color: white;
+    margin: auto;
+    padding-left: 20%;
+    padding-right: 10%;
+}
+.nav{
+  grid-area:nav;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  }
+    #main-button{
+      background-color: white;
+      color: black;
+      border: solid black 2px;
+      font-style: normal;
+      box-shadow: 0 5px #5a5a5a;
+      }
+      #main-button:hover{
+        background-color: black;
+        color:white;
+        border: solid,white,2px;
+        }
+      #main-button:active {
+        background-color: black;
+        color:white;
+        border: solid,white,2px;
+        box-shadow: 0 2px #666;
+        transform: translateY(3px);
+      }
+  
+#main_frame{
+ height: 100%;
+ width:100%;
+ border:none;
+ align-content:center;
+}
+.layout{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: max-content;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "main nav";
+  }
+  
+  .main{
+    grid-area: main;
+    width: 800px;
+    padding: 20px;
+    height: 900px;
+    }
+    
+  button{
+    background-color: black;
+    color: white;
+    border: solid,white,2px;
+    height:40px;
+    width: 100%;
+    box-shadow: 0 5px #5a5a5a;
+    font-size: 24px;
+    font-family: monospace;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  button:hover{
+    background-color: white;
+    color: black;
+  }
+  button:active {
+    background-color: #787878;
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
+  }
+</style>
+<div class="layout">
+<div class= "main">
+<iframe id=main_frame name="main_frame" src="home.html"> </iframe>
+</div>
+<div class="nav">
+<button id="main-button" onclick="document.location='start.html'">start game</button>
+<button onclick="setURL('home.html')">home</button>
+<button onclick="setURL('tutorial.html')">tutorial</button>
+<button onclick="setURL('assets.html')">assets</button>
+<script>
+function setURL(url){
+    document.getElementById("main_frame").src = url;
+}
+</script>
+</div>
+</div>
+</body>
+</html>

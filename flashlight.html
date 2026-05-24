@@ -1,0 +1,83 @@
+<!DOCUTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="flashlight.css">
+  </head>
+<body>
+<div class="room">
+<img id="light"src= "livingroom/clear_light.jpg">
+<img id="dark"src= "livingroom/clear_dark.jpg">
+
+</div>
+
+<!--<style>
+.section{
+  width:100%;
+  height:900px;
+  position:absolute;
+  top:0;left:0;
+  overflow:hidden;
+  cursor:none;
+  color:white;
+}
+#dark{
+  z-index:1;
+}
+#light{
+ clip-path: circle(0% at 50% 50%);
+  z-index:3;
+}
+#light, #dark{
+  position: absolute;
+  top: 0; left:0;
+  height: 900px;
+  width: 100%;
+}
+</style>-->
+
+
+<div class="location_finder">
+<p id="display" >location here</p>
+
+
+
+<script>
+var clickcounter=0;
+var percent= 35;
+document.addEventListener("mousemove", (e)=>{
+let Mx = e.pageX;
+let My = e.pageY;
+document.getElementById('display').innerHTML= Mx+", "+My;
+document.querySelector('#light').style.clipPath = "circle("+percent+"% at "+e.pageX+"px "+e.pageY+"px)";
+});
+
+
+document.addEventListener("click", (e)=>{ 
+clickcounter++;
+//alert(clickcounter%2);
+if(clickcounter%2==0){
+light_on();
+}
+else{
+light_out();
+}
+});
+
+function light_on(){
+document.querySelector('.room').style.cursor= "none";
+document.querySelector('#light').style.clipPath = "circle(35%)";
+percent= 35;
+}
+
+function light_out(){
+//alert("function triggered");
+  document.querySelector('.room').style.cursor= "pointer";
+  document.querySelector('#light').style.clipPath = "circle(0%)";
+ percent= 0;
+}
+
+</script>
+</div>
+
+</body>
+</html>

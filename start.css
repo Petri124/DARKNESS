@@ -1,0 +1,26 @@
+
+
+body{
+    background-color: black;
+    color: white;
+    margin: auto;
+    font-family: monospace;
+}
+button{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: solid,black,2px;
+    height:40px;
+    width: 100%;
+    box-shadow: 0 5px #5a5a5a;
+    font-size: 24px;
+    font-family: monospace;
+  }
+  button:hover{
+    background-color: #d9d9d9;
+  }
+  button:active {
+    background-color: #787878;
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
+  }
